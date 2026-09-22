@@ -1,0 +1,61 @@
+/* ==========================================================
+   19. REASONS FLIP CARDS
+   ========================================================== */
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 620px;
+  margin: 2rem auto 2.6rem;
+}
+
+.reason-card {
+  perspective: 900px;
+  aspect-ratio: 1 / 1;
+}
+
+.reason-card-inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform .6s var(--ease-bounce);
+}
+
+.reason-card[aria-pressed="true"] .reason-card-inner {
+  transform: rotateY(180deg);
+}
+
+.reason-card-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .6rem;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, .18);
+}
+
+.reason-card-front {
+  background: linear-gradient(150deg, var(--burgundy-light), var(--burgundy-deep));
+  color: var(--gold-light);
+  font-size: 1.6rem;
+}
+
+.reason-card-back {
+  background: var(--cream);
+  color: var(--burgundy-deep);
+  font-family: var(--font-body);
+  font-size: .72rem;
+  line-height: 1.4;
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 640px) {
+  .reasons-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

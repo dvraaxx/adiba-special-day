@@ -1,0 +1,215 @@
+/* ==========================================================
+   PLAYLIST
+   ========================================================== */
+.playlist-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  margin-top: 2.6rem;
+  flex-wrap: wrap;
+}
+
+.video-frame {
+  width: min(640px, 100%);
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .25);
+  border: 6px solid var(--gold-light);
+  background: var(--burgundy-deep);
+  transition: box-shadow .3s var(--ease);
+}
+
+.video-frame:hover {
+  box-shadow: 0 24px 48px rgba(0, 0, 0, .3);
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.frame-deco {
+  width: 96px;
+  height: 118px;
+  padding: 6px;
+  background: linear-gradient(160deg, var(--gold-light), var(--gold));
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+  border-radius: 3px;
+  display: none;
+}
+
+.frame-deco-inner {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(150deg, var(--burgundy-light), var(--burgundy));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-size: .72rem;
+}
+
+.frame-deco-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Vinyl */
+.vinyl-wrap {
+  display: none;
+  align-items: center;
+}
+
+.vinyl-record {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #1a1a1a 30%, #0d0d0d 35%, #222 40%, #111 45%, #1a1a1a 50%, #0d0d0d 55%, #222 60%, #111 65%, #1a1a1a 70%, #333 100%);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .4);
+  position: relative;
+  animation: vinylSpin 4s linear infinite;
+}
+
+.vinyl-label {
+  position: absolute;
+  inset: 32%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, var(--gold-light), var(--gold));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vinyl-label span {
+  font-family: var(--font-script);
+  font-size: 1rem;
+  color: var(--burgundy-deep);
+}
+
+.vinyl-groove {
+  position: absolute;
+  inset: 15%;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, .06);
+}
+
+.vinyl-groove-2 {
+  inset: 20%;
+}
+
+.vinyl-groove-3 {
+  inset: 25%;
+}
+
+@keyframes vinylSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Equalizer */
+.equalizer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  height: 32px;
+  margin-top: 1.4rem;
+}
+
+.eq-bar {
+  width: 4px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--gold-light), var(--burgundy-light));
+  animation: eqBounce 1.2s ease-in-out infinite alternate;
+  animation-delay: var(--eq-delay, 0s);
+}
+
+@keyframes eqBounce {
+  0% {
+    height: 6px;
+  }
+
+  50% {
+    height: 24px;
+  }
+
+  100% {
+    height: 10px;
+  }
+}
+
+.floating-note {
+  animation: floatNote 3s ease-in-out infinite alternate;
+}
+
+.note-1 {
+  animation-delay: 0s;
+}
+
+.note-2 {
+  animation-delay: -1.5s;
+}
+
+@keyframes floatNote {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(-12px) rotate(5deg);
+  }
+}
+
+.note-doodles {
+  display: flex;
+  justify-content: center;
+  gap: 40vw;
+  margin-top: -1rem;
+}
+
+.note-doodle {
+  width: 26px;
+  height: 18px;
+  opacity: .4;
+}
+
+.note-doodle path,
+.note-doodle circle {
+  stroke: var(--burgundy-light);
+  stroke-width: 2.4;
+  fill: none;
+}
+
+.note-doodle circle {
+  fill: var(--burgundy-light);
+}
+
+.playlist-caption {
+  margin-top: 1.4rem;
+  font-family: var(--font-script);
+  font-size: 1.2rem;
+  color: var(--burgundy);
+}
+
+@media (min-width: 760px) {
+  .frame-deco {
+    display: block;
+  }
+
+  .vinyl-wrap {
+    display: flex;
+  }
+}
+

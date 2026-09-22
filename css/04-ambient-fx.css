@@ -1,0 +1,29 @@
+/* ==========================================================
+   AMBIENT SPARKLES CANVAS & PROGRESS RAIL
+   ========================================================== */
+#sparklesCanvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.progress-rail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(107, 30, 43, 0.08);
+  z-index: 700;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--burgundy), var(--gold));
+  transition: width .1s linear;
+}
+

@@ -1,0 +1,75 @@
+/* ==========================================================
+   17. KEEPSAKE / PRINT — "Simpan Surat sebagai Kenangan"
+   ========================================================== */
+
+.btn-keepsake {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  margin-top: 1.8rem;
+  padding: .55rem 1.2rem;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--burgundy-deep);
+  font-family: var(--font-display);
+  font-size: .7rem;
+  letter-spacing: .05em;
+  transition: background .3s var(--ease), transform .3s var(--ease);
+}
+
+.btn-keepsake:hover {
+  background: rgba(232, 200, 116, .25);
+  transform: translateY(-2px);
+}
+
+#printKeepsake {
+  display: none;
+}
+
+@media print {
+
+  /* Sembunyikan seluruh halaman kecuali kenangan surat yang di-generate */
+  body>*:not(#printKeepsake) {
+    display: none !important;
+  }
+
+  #printKeepsake {
+    display: block !important;
+  }
+
+  .keepsake-page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0;
+    background: var(--cream);
+    font-family: var(--font-body);
+  }
+
+  .keepsake-page p {
+    font-size: 12pt;
+    line-height: 1.75;
+    margin-bottom: 12pt;
+    color: var(--ink);
+  }
+
+  .keepsake-page .letter-salutation {
+    font-family: var(--font-display);
+    font-size: 13pt;
+    color: var(--burgundy-deep);
+  }
+
+  .keepsake-page .letter-closing {
+    margin-top: 14pt;
+  }
+
+  .keepsake-page .letter-signature {
+    font-family: var(--font-script);
+    font-size: 22pt;
+    color: var(--burgundy);
+  }
+
+  @page {
+    margin: 1.8cm;
+  }
+}

@@ -1,0 +1,49 @@
+/* ==========================================================
+   16. MOTION & MICRO-INTERACTIONS
+   (Agent 2 — Motion & Micro-interaction Specialist)
+   ========================================================== */
+
+/* --- Doodle: sebelumnya tidak punya hover state sama sekali --- */
+.doodle {
+  transition: transform .35s var(--ease);
+}
+
+.doodle:not(.is-dragging):hover,
+.doodle:not(.is-dragging):focus-visible {
+  transform: scale(1.18) rotate(-6deg);
+}
+
+/* --- Photo: perkuat afordans sebelum di-drag (di luar 3D tilt yang sudah ada) --- */
+.photo:not(.is-dragging) {
+  transition: transform .35s var(--ease);
+}
+
+.photo:not(.is-dragging):hover {
+  transform: rotate(var(--r)) translateY(-6px) scale(1.03);
+}
+
+/* --- Staggered reveal per item di desk (panel Moment) ---
+   Pakai :where() supaya spesifisitasnya setara .desk-item-reveal biasa,
+   tapi tetap bisa membawa rotate(var(--r)) yang sudah dipakai foto/sticky-note,
+   supaya rotasi polaroid tidak "reset" saat animasi masuk berjalan. */
+:where(.rot-1, .rot-2, .rot-3, .rot-4).desk-item-reveal {
+  opacity: 0;
+  transform: rotate(var(--r)) scale(.82);
+  transition: opacity .5s var(--ease), transform .5s var(--ease-bounce);
+}
+
+:where(.rot-1, .rot-2, .rot-3, .rot-4).desk-item-reveal.is-visible {
+  opacity: 1;
+  transform: rotate(var(--r)) scale(1);
+}
+
+.doodle.desk-item-reveal {
+  opacity: 0;
+  transform: scale(.82);
+  transition: opacity .5s var(--ease), transform .5s var(--ease-bounce);
+}
+
+.doodle.desk-item-reveal.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}

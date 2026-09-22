@@ -1,0 +1,15 @@
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+.footer {
+  text-align: center;
+  padding: 2.2rem;
+  background: var(--burgundy-deep);
+  color: var(--cream);
+  font-family: var(--font-script);
+  font-size: 1.1rem;
+  opacity: .8;
+  position: relative;
+  z-index: 1;
+}
+

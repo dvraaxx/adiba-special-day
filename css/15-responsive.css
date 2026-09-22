@@ -1,0 +1,55 @@
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+@media (max-width: 640px) {
+  .desk {
+    height: 760px;
+  }
+
+  .photo {
+    width: 122px;
+  }
+
+  .sticky-note {
+    width: 138px;
+    font-size: 1rem;
+    padding: 14px 12px;
+    min-height: 100px;
+  }
+
+  .doodle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .letter-card-inner {
+    min-height: 640px;
+  }
+
+  .letter-paper {
+    padding: 2.1rem 1.4rem 1.6rem;
+  }
+
+  .menu-icons {
+    gap: 1.4rem 1.6rem;
+  }
+
+  .icon-circle {
+    width: 68px;
+    height: 68px;
+  }
+
+  .icon-circle svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .vinyl-record {
+    width: 70px;
+    height: 70px;
+  }
+
+  .equalizer {
+    height: 24px;
+  }
+}

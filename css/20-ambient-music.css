@@ -1,0 +1,42 @@
+/* ==========================================================
+   20. AMBIENT MUSIC TOGGLE
+   (sudah dicakup oleh aturan @media print di 17-print-keepsake.css
+   yang menyembunyikan semua direct child <body> kecuali #printKeepsake)
+   ========================================================== */
+.btn-ambient-music {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 500;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--burgundy-deep);
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .3);
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+
+.btn-ambient-music:hover {
+  transform: scale(1.08);
+}
+
+.btn-ambient-music.is-playing {
+  animation: ambientPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes ambientPulse {
+
+  0%,
+  100% {
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .3), 0 0 0 0 rgba(232, 200, 116, .5);
+  }
+
+  50% {
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .3), 0 0 0 8px rgba(232, 200, 116, 0);
+  }
+}

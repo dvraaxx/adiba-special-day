@@ -1,0 +1,48 @@
+/* ==========================================================
+   CUSTOM CURSOR (hati kecil)
+   ========================================================== */
+body.has-custom-cursor,
+body.has-custom-cursor a,
+body.has-custom-cursor button,
+body.has-custom-cursor .draggable {
+  cursor: none;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity .2s var(--ease);
+  will-change: transform;
+}
+
+.custom-cursor::before {
+  content: '❤';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--burgundy-light);
+  transform: scale(.7);
+  opacity: .85;
+  transition: transform .25s var(--ease-bounce), opacity .25s var(--ease), color .3s var(--ease);
+}
+
+.custom-cursor.is-hover::before {
+  transform: scale(1.35);
+  opacity: 1;
+  color: var(--gold);
+}
+
+.custom-cursor.is-active::before {
+  transform: scale(.55);
+}
+

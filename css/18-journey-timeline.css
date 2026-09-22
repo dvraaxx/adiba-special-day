@@ -1,0 +1,48 @@
+/* ==========================================================
+   18. JOURNEY TIMELINE
+   ========================================================== */
+.timeline {
+  list-style: none;
+  max-width: 560px;
+  margin: 2.2rem auto 3rem;
+  padding: 0;
+  text-align: left;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 0 0 1.7rem 2rem;
+  border-left: 2px solid rgba(107, 30, 43, .18);
+}
+
+.timeline-item:last-child {
+  border-left-color: transparent;
+  padding-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -7px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 4px var(--cream), 0 0 0 5px rgba(107, 30, 43, .18);
+}
+
+.timeline-date {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: .7rem;
+  letter-spacing: .06em;
+  color: var(--burgundy);
+  margin-bottom: .3rem;
+}
+
+.timeline-text {
+  font-size: .92rem;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0;
+}

@@ -1,0 +1,27 @@
+/* ==========================================================
+   style.css — HANYA @import, jangan tulis CSS langsung di sini.
+   CSS baru → buat file baru di css/ (lanjutkan nomor dari yang
+   terakhir), lalu daftarkan importnya di bawah.
+   ========================================================== */
+@import url("css/01-tokens-base.css");
+@import url("css/02-loading-screen.css");
+@import url("css/03-cursor.css");
+@import url("css/04-ambient-fx.css");
+@import url("css/05-hero.css");
+@import url("css/06-section-shared.css");
+@import url("css/07-menu.css");
+@import url("css/08-panels.css");
+@import url("css/09-scrapbook-desk.css");
+@import url("css/10-lightbox.css");
+@import url("css/11-letter.css");
+@import url("css/12-playlist.css");
+@import url("css/13-gift-confetti.css");
+@import url("css/14-footer.css");
+@import url("css/15-responsive.css");
+@import url("css/16-motion-enhancements.css");
+@import url("css/17-print-keepsake.css");
+@import url("css/18-journey-timeline.css");
+@import url("css/19-reasons-cards.css");
+@import url("css/20-ambient-music.css");
+@import url("css/21-hero-countdown.css");
+@import url("css/22-countdown-gate.css");

@@ -834,7 +834,7 @@ document.addEventListener('click', function tryAmbientAutoStart() {
    Ganti tanggal di bawah kalau perlu (format ISO, offset +07:00 = WIB).
    ========================================================== */
 const heroCountdown = document.getElementById('heroCountdown');
-const birthdayTarget = new Date('2026-09-24T00:00:00+07:00'); // Diubah ke hari ini agar bisa di-preview
+const birthdayTarget = new Date('2026-09-23T00:00:00+07:00'); // Diubah ke hari ini agar bisa di-preview
 
 function updateHeroCountdown() {
   if (!heroCountdown) return;
@@ -873,7 +873,7 @@ setInterval(updateHeroCountdown, 30000);
    Ganti tanggalnya di sini kalau perlu.
    ========================================================== */
 const countdownGate = document.getElementById('countdownGate');
-const gateTarget = new Date('2026-09-24T00:00:00+07:00'); // Diubah ke hari ini agar gate langsung terbuka
+const gateTarget = new Date('2026-09-23T00:00:00+07:00'); // Diubah ke hari ini agar gate langsung terbuka
 let gateTimer;
 
 function padNum(n) {
